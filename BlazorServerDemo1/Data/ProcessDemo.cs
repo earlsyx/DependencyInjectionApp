@@ -14,7 +14,7 @@
             return _demo.StartUpTime.Month switch
             {
                 1 => 31,
-                2 => 28,
+                2 => (_demo.StartUpTime.Year % 4 == 0) ? 29: 28,
                 3 => 31,
                 4 => 30,
                 5 => 31,
