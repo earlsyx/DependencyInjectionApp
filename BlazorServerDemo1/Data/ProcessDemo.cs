@@ -2,9 +2,9 @@
 {
     public class ProcessDemo
     {
-        private readonly Demo _demo;
+        private readonly IDemo _demo;
 
-        public ProcessDemo(Demo demo) // constructor injection 
+        public ProcessDemo(IDemo demo) // constructor injection 
         {
             _demo = demo;
         }
