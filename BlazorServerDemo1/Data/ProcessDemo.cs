@@ -1,4 +1,6 @@
-﻿namespace BlazorServerDemo1.Data
+﻿using BlazorServerDemo1.Models;
+
+namespace BlazorServerDemo1.Data
 {
     public class ProcessDemo
     {
@@ -9,16 +11,27 @@
 
         //public ProcessDemo(IServiceProvider service) // constructor injection 
 
-
-        public ProcessDemo(IDemo demo) // constructor injection 
+        public int AnotherNumber { get; set; } = 3;
+        public ProcessDemo(IDemo demo, int anotherNumber = 5) // constructor injection 
         {
             _demo = demo;
             //_service = service;
+            AnotherNumber = anotherNumber;
 
         }
 
+        //public ProcessDemo(IDemo demo) // constructor injection 
+        //{
+        //    _demo = demo;
+        //    //_service = service;
+
+        //}
+
         public int GetDaysInMonth()
         {
+            PersonModel p = new PersonModel();
+
+            p.FirstName = "Tim";
             //IDemo _demo = _service.GetRequiredService<IDemo>();
             return _demo.StartUpTime.Month switch
             {

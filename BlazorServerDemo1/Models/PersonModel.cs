@@ -1,0 +1,20 @@
+﻿namespace BlazorServerDemo1.Models
+{
+    public interface IPersonModel
+    {
+        string FirstName { get; set; }
+        string LastName { get; set; }
+    }
+    public class PersonModel : IPersonModel
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+    }
+
+    public class MockPersonModel : IPersonModel
+    {
+        public string FirstName { get ; set ; }
+        public string LastName { get; set; }
+
+    }
+}
