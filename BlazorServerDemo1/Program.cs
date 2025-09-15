@@ -16,6 +16,16 @@ namespace BlazorServerDemo1
             builder.Services.AddSingleton<WeatherForecastService>();
             builder.Services.AddDemoInfo();
 
+         
+            // Samples
+            // More info, depnedency injeciton srveice registartion methods , microsoft docs.
+            //builder.Services.AddTransient<Demo>();
+            //builder.Services.AddTransient<IDemo, Demo>();
+            //builder.Services.AddSingleton(new DemoWithData(5));
+            //builder.Services.AddSingleton(new Demo());
+            //builder.Services.AddTransient<IDemo>(i => new Demo());
+            //builder.Services.AddTransient(i => new DemoWithData(4)); 
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
