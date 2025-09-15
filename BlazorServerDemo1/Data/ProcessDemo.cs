@@ -2,15 +2,24 @@
 {
     public class ProcessDemo
     {
+        //private readonly IServiceProvider _service;
         private readonly IDemo _demo;
+        //private readonly ILogger<ProcessDemo> _logger;
+        //private readonly IConfiguration<ProcessDemo> _config;
+
+        //public ProcessDemo(IServiceProvider service) // constructor injection 
+
 
         public ProcessDemo(IDemo demo) // constructor injection 
         {
             _demo = demo;
+            //_service = service;
+
         }
 
         public int GetDaysInMonth()
         {
+            //IDemo _demo = _service.GetRequiredService<IDemo>();
             return _demo.StartUpTime.Month switch
             {
                 1 => 31,
