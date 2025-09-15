@@ -14,9 +14,7 @@ namespace BlazorServerDemo1
             builder.Services.AddRazorPages();
             builder.Services.AddServerSideBlazor();
             builder.Services.AddSingleton<WeatherForecastService>();
-            builder.Services.AddTransient<IDemo,Demo>();
-            builder.Services.AddTransient<IUtcDemo,UtcDemo>();
-            builder.Services.AddTransient<ProcessDemo>();
+            builder.Services.AddDemoInfo();
 
             var app = builder.Build();
 
