@@ -9,7 +9,7 @@ namespace BlazorServerDemo1
             services.AddTransient<IUtcDemo, UtcDemo>();
             services.AddTransient<IDemo, Demo>();
             services.AddTransient<ProcessDemo>();
-
+            //scoping
             return services;
         }
     }
